@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Style Scroll Control</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .scroll-wrapper {
+      position: relative;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 20px 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      scroll-behavior: smooth;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      min-width: 160px;
+      background-color: #181818;
+      border-radius: 8px;
+      padding: 12px;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .card:hover {
+      background-color: #282828;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .title {
+      font-size: 14px;
+      margin: 8px 0 4px;
+      font-weight: bold;
+    }
+
+    .artist {
+      font-size: 12px;
+      color: #b3b3b3;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    .scroll-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .scroll-left {
+      left: -10px;
+    }
+
+    .scroll-right {
+      right: -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn scroll-left" onclick="scrollLeft()">&#10094;</button>
+    <div class="scroll-container" id="scrollable">
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e027fba843e88511d93b4208df1" class="cover" alt="">
+        <div class="title">Which One</div>
+        <div class="artist">Drake</div>
+      </div>
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e02a259d55a4a1aa43dbf5c8a7e" class="cover" alt="">
+        <div class="title">Sapphire</div>
+        <div class="artist">Ed Sheeran</div>
+      </div>
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e021a3125b3af3bb13e7768fdd6" class="cover" alt="">
+        <div class="title">Pal Pal</div>
+        <div class="artist">Afusic</div>
+      </div>
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+       <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d00001e023c8b50e9c0f41e56f238db5e" class="cover" alt="">
+        <div class="title">Extra</div>
+        <div class="artist">Someone</div>
+      </div>
+      <!-- More cards if needed -->
+    </div>
+    <button class="scroll-btn scroll-right" onclick="scrollRight()">&#10095;</button>
+  </div>
+
+  <script>
+    const container = document.getElementById('scrollable');
+    const scrollAmount = 300;
+
+    function scrollLeft() {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

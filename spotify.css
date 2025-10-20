@@ -1,0 +1,359 @@
+* {
+     margin: 0px;
+     padding: 0px;
+     font-family: var(--encore-body-font-stack, var(--fallback-fonts, sans-serif)), sans-serif;
+}
+
+.nav {
+     justify-content: flex-start;
+     align-items: center;
+     height: 66px;
+     color: #b3b3b3;
+     font-family: var(--encore-body-font-stack, var(--fallback-fonts, sans-serif)), sans-serif;
+}
+
+.logo {
+     width: 38vw;
+}
+
+.logo img {
+     padding: 6px;
+     margin: 8px 4px 7px 22px;
+}
+
+.home {
+     width: 29px;
+     height: 29px;
+     background-color: #1f1f1f;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.home:hover {
+     transform: scale(1.1);
+}
+
+.navhs li {
+     list-style: none;
+     width: 29px;
+     padding: 8px;
+}
+
+.left {
+     width: 25vw;
+     color: rgb(255, 255, 255);
+     margin: 2px;
+     background-color: #121212;
+     max-height: 90vh;
+     overflow-y: scroll;
+
+}
+
+.right {
+     width: 75vw;
+     color: rgb(255, 255, 255);
+     margin: 2px;
+     background-color: #121212;
+     position: relative;
+     max-height: 90vh;
+     overflow-y: scroll;
+
+}
+
+.search {
+     width: 25vw;
+     justify-content: space-between;
+     background: rgb(36, 35, 35);
+     border-radius: 25px;
+     height: 47px;
+     margin: 9px 6px 11px 23px;
+}
+
+.rol {
+     background-color: rgb(255, 255, 255);
+     width: 1px;
+     height: 25px;
+}
+
+.isl {
+     width: 38vw;
+     gap: 15px;
+     justify-content: end;
+}
+
+.iimg {
+     width: 15px;
+     margin: 0px 8px 3px 16px;
+     filter: invert(1);
+     display: flex;
+     justify-content: center;
+
+}
+
+.isl p:last-child {
+     padding: 16px;
+     border-radius: 84px;
+     background-color: white;
+     color: black;
+     width: 80px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 3px 12px 4px 2px;
+}
+
+.isl p:hover {
+     transition: transform 0.3s ease;
+     transform: scale(1.1);
+     /* visually 10% বড় হবে */
+
+}
+
+
+.library {
+     justify-content: space-between;
+     margin: 21px 28px 53px 19px;
+}
+
+.create {
+     margin-top: 30px;
+}
+
+.playlist {
+     width: 23vw;
+     display: flex;
+     flex-direction: column;
+     margin: 10px;
+     gap: 8px;
+     background-color: #1f1f1f;
+     padding: 8px;
+}
+
+.playlist p:nth-of-type(1) {
+     color: rgb(255, 255, 255);
+}
+
+.playlist p:last-of-type {
+     color: rgb(179, 179, 179);
+     font-weight: 400;
+     margin-bottom: 20px;
+}
+
+.playlist button {
+     padding: 9px;
+     margin: 4px;
+     width: 140px;
+     border-radius: 88px;
+     font-weight: 700;
+}
+
+.emni {
+     margin: 8px;
+}
+
+.emni2 {
+     padding: 18px;
+}
+
+.first {
+     height: 60vh;
+}
+
+.privacy {
+     width: 20vw;
+     font-weight: 400;
+     font-size: 12px;
+     gap: 18px;
+     flex-wrap: wrap;
+     justify-content: start;
+     margin: 20px;
+     list-style: none;
+
+}
+
+.privacy li a {
+     text-decoration: none;
+     color: rgb(179, 179, 179);
+
+
+}
+
+.Cookies {
+     margin: 20px;
+     font-size: 12px;
+     font-weight: 400;
+}
+
+.english {
+     display: flex;
+     border: 1px solid rgb(131, 131, 131);
+     width: 90px;
+     padding: 6px;
+     border-radius: 100px;
+     background-color: #1f1f1f;
+     margin: 20px;
+     font-size: 14px;
+}
+
+.iimg2 {
+     margin: 0px 9px 3px 6px;
+}
+
+.cardnav {
+     justify-content: space-between;
+     background-color: #121212;
+     border-radius: 9px;
+
+
+}
+
+.cardnav h1 {
+     margin: 10px 0px 0px 27px;
+}
+
+.cardnav h3 {
+     margin: 14px 38px 0px 1px;
+     font-weight: 400;
+     font-size: 14px;
+     color: rgb(179, 179, 179);
+}
+
+.swiper-wrapper {
+     width: 100%;
+     display: flex;
+}
+
+.swiper {
+     max-width: 96%;
+     padding: 32px 20px;
+}
+
+.swiper-slide {
+     width: auto;
+}
+
+
+.card {
+     width: 160px;
+     padding: 3px 8px 10px 8px;
+     background-color: #121212;
+     margin: 4px 0px 0px 0px;
+     border-radius: 15px;
+     position: relative;
+     min-height: 240px;
+
+}
+
+.long-text {
+     min-height: 200px;
+
+}
+
+.card img {
+     width: 100%;
+     object-fit: contain;
+     padding-top: 5px;
+     border-radius: 9px;
+}
+
+.card h3 {
+     font-weight: 400;
+     font-size: 16px;
+     padding-top: 5px;
+}
+
+.card p {
+     font-weight: 400;
+     font-size: 14px;
+     color: #b3b3b3;
+     padding-top: 5px;
+}
+
+.card:hover {
+     background-color: #1f1f1f;
+}
+
+.play {
+     width: 23px;
+     height: 23px;
+     background-color: #1fdf64;
+     border-radius: 44px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 12px;
+     position: absolute;
+     top: 188px;
+     right: 17px;
+     /* opacity: 0; */
+     transition: all 1s ease-out;
+}
+
+
+.swiper {
+     width: 100%;
+     overflow: hidden;
+
+}
+
+.right {
+     position: relative;
+}
+
+/* Controller button styles */
+.swiper-button-prev,
+.swiper-button-next {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 10;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.6);
+     padding: 8px;
+     border-radius: 50%;
+     cursor: pointer;
+}
+
+/* Stick prev button near the .left sidebar */
+.swiper-button-prev {
+     left: 15px;
+     /* adjust this until it looks aligned with sidebar */
+}
+
+/* Stick next button to the right edge */
+.swiper-button-next {
+     right: 15px;
+     /* adjust as needed */
+}
+
+
+
+.playbar {
+     display: flex;
+     justify-content: center;
+     background-color: hsl(0, 0%, 0%);
+     width: 100%;
+     height: 50px;
+     position: absolute;
+     bottom:10px;
+
+}
+.playbar img{
+     width: 24px;
+     gap: 9px;
+     margin: 14px;
+}
+.playbar img:nth-of-type(3){
+     width: 23px;
+    height: 23px;
+    background-color: #ffffff;
+    border-radius: 44px;
+    padding: 4px;
+    margin-top: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
